@@ -1,5 +1,5 @@
 # CO SCI 962 - Project 1
-**Course Title:** Introduction to Data Structures<br/>
+**Course Title:** Web Programming Using JavaScript<br/>
 **Section:** 10036<br/>
 **Instructor:** Manish Patel<br/>
 **Semester:** Spring 2018 (2018-02-05 to 2018-06-04)<br/>
