@@ -21,47 +21,64 @@ img {
 /* Style for the container centers the page and specifies the width */
 #container {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style for the header specifies top margin, background color, rounded corners,
-and center align content */
 header {
-    text-align: center;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1d1d1c;
 }
 
-/* Style for nav specifies text propertieas */
 nav {
+    width: inherit;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+nav a {
+    margin: 0.5rem 1.5rem;
+    padding: 1rem;
+
+    border-radius: 3rem;
+
     font-family: Montserrat, "Times New Roman", sans-serif;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-top: -1.5em;
+    color: #1d1d1c;
+
+    background-color: #e6e7e8;
 }
 
-/* Style specifies padding and margins for unordered list */
-nav ul {
-    padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-/* Style for nav li specifies the background color, rounded corners, removes
-bullet style, and applies margins and padding for list items within the
-navigation */
-nav li {
-    background-color: #9d9d93;
-    border-radius: 2em;
-    list-style-type: none;
-    margin: 0.3em;
-    padding: 0.4em;
-}
-
-/* Style changes navigation link text color to white and removes the underline */
-nav li a {
-    color: #fff;
+nav a:link,
+nav a:visited {
+    color: #1d1d1c;
     text-decoration: none;
+    outline: 0;
+}
+
+nav a:hover,
+nav a:active {
+    background-color: #58595b;
+    color: #e6e7e8;
+}
+
+nav a:first-child {
+    margin-top: 0;
+}
+
+nav a:last-child {
+    margin-bottom: 0;
 }
 
 /* Style displays the mobile class */
@@ -78,9 +95,9 @@ nav li a {
 padding, rounded corners, and borders */
 main {
     display: block;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 1em;
-    margin-top: 0.5em;
+    margin: 1.5rem;
     padding: 1em;
     border-radius: 2em 0 2em 0;
     background-color: #fff;
@@ -129,24 +146,79 @@ aside {
 /* Media query for tablet layout targets screen size with a minimum width of
 660px. */
 @media only screen and (min-width: 660px) {
-    /* Style specifies a horizontal display for navigation links */
-    nav li {
-        display: inline;
-        float: left;
-        margin-left: 1%;
-        margin-right: 1%;
-        padding-left: 0;
-        padding-right: 0;
-        width: 18%;
-        white-space: nowrap;
+    #container {
+        padding-top: 6rem;
+
+        display: flex;
+        flex-flow: column wrap;
+
+        background-color: #1d1d1c;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 6rem;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        background-color: #1d1d1c;
+    }
+
+    #logo {
+        flex-shrink: 0;
+    }
+
+    #logo img {
+        height: 6rem;
+    }
+
+    nav {
+        height: 100%;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    nav a {
+        height: 100%;
+        margin: 0;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
         border-radius: 0;
+
+        display: flex;
+        align-items: center;
+
+        color: #e6e7e8;
+
         background-color: transparent;
+    }
+
+    nav a:link,
+    nav a:visited {
+        color: #e6e7e8;
+    }
+
+    nav a:hover,
+    nav a:active {
+        box-shadow: 0 -0.8rem 0 #e6e7e8 inset;
+    }
+
+    #nav-current {
+        background: #e6e7e8;
+        color: #1d1d1c;
     }
 
     /* Style specifies clear and top margin properties for the main element */
     main {
         clear: left;
-        margin-top: -0.3em;
         border-radius: 0;
         overflow: auto;
     }
@@ -178,8 +250,6 @@ aside {
     /* Style specifies to display the tablet class */
     .tablet {
         display: block;
-        margin-top: -3em;
-        margin-bottom: -1em;
     }
 
     /* Style specifies a font weight and top margin for description list terms */
@@ -280,36 +350,6 @@ aside {
 /* Media query for desktop layout targets screens with a minimum width of 830px.
 Inherits styles from mobile layout defined above. */
 @media only screen and (min-width: 830px) {
-    #container {
-        padding-top: 6rem;
-
-        display: flex;
-        flex-flow: column wrap;
-
-        background-color: #1d1d1c;
-    }
-
-    header {
-        position: fixed;
-        width: 100%;
-        height: 6rem;
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-
-        background-color: #1d1d1c;
-    }
-
-    #logo {
-        flex-shrink: 0;
-    }
-
-    #logo img {
-        height: 6rem;
-    }
-
     /*#logo-text {
         font-family: Inconsolata, monospace;
         font-weight: bold;
@@ -319,41 +359,8 @@ Inherits styles from mobile layout defined above. */
         text-align: center;
     }*/
 
-    nav {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        flex-grow: 1;
-    }
-
     nav a {
-        width: inherit;
-        height: 100%;
-
-        display: flex;
-        align-items: center;
-        padding: 0 35px;
-        box-sizing: border-box;
-    }
-
-    nav a:link, nav a:visited {
-        color: #e6e7e8;
-        text-decoration: none;
-        outline: 0;
-    }
-
-    nav a:hover {
-        box-shadow: 0 -8px 0 #e6e7e8 inset;
-    }
-
-    #nav-current {
-        background: #e6e7e8;
-        color: #1d1d1c;
+        padding: 0 3rem;
     }
 
     #banner {
