@@ -3,18 +3,27 @@
 html {
     /* 1rem = 10px assuming default client font size of 16px */
     font-size: 62.5%;
+    font-family: Montserrat, sans-serif;
 }
 
 /* Style for body specifies a background color */
 body {
     background-color: #1d1d1c;
     margin: 0;
-    font-size: 160%; /* Resets the font size for anything using em */
+    font-size: 1.6rem;
+    /*overflow-y: scroll;*/
 }
 
 /* Style to create a fluid image */
 img {
     max-width: 100%
+}
+
+/* Removes styling from links. */
+a {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
 }
 
 /* Styles for Mobile Layout */
@@ -51,9 +60,9 @@ nav a {
 
     border-radius: 3rem;
 
-    font-family: Montserrat, "Times New Roman", sans-serif;
+    font-family: Inconsolata, sans-serif;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     color: #1d1d1c;
 
@@ -63,8 +72,6 @@ nav a {
 nav a:link,
 nav a:visited {
     color: #1d1d1c;
-    text-decoration: none;
-    outline: 0;
 }
 
 nav a:hover,
@@ -95,10 +102,8 @@ nav a:last-child {
 padding, rounded corners, and borders */
 main {
     display: block;
-    font-family: Montserrat, sans-serif;
-    font-size: 1em;
     margin: 1.5rem;
-    padding: 1em;
+    padding: 1.5rem;
     border-radius: 2em 0 2em 0;
     background-color: #fff;
     opacity: 0.85;
@@ -116,16 +121,9 @@ main a {
 
 /* Style for the footer specifies font size, text alignment, and top margin */
 footer {
-    font-size: .70em;
+    font-size: 1.2rem;
     text-align: center;
-    margin-top: 2em;
-    color: #fff;
-}
-
-/* Style for anchor elements within the footer */
-footer a {
-    color: #fff;
-    text-decoration: none;
+    color: #e6e7e8;
 }
 
 /* Style hides the tablet class */
@@ -146,26 +144,12 @@ aside {
 /* Media query for tablet layout targets screen size with a minimum width of
 660px. */
 @media only screen and (min-width: 660px) {
-    #container {
-        padding-top: 6rem;
-
-        display: flex;
-        flex-flow: column wrap;
-
-        background-color: #1d1d1c;
-    }
-
     header {
         position: fixed;
-        width: 100%;
         height: 6rem;
 
-        display: flex;
         flex-flow: row nowrap;
         justify-content: flex-start;
-        align-items: center;
-
-        background-color: #1d1d1c;
     }
 
     #logo {
@@ -208,6 +192,7 @@ aside {
 
     nav a:hover,
     nav a:active {
+        background-color: transparent;
         box-shadow: 0 -0.8rem 0 #e6e7e8 inset;
     }
 
@@ -216,9 +201,47 @@ aside {
         color: #1d1d1c;
     }
 
+    #container {
+        padding-top: 6rem;
+
+        display: flex;
+        flex-flow: column wrap;
+
+        background-color: #1d1d1c;
+    }
+
+    #banner {
+        height: calc(100vh / 3);
+        overflow: hidden;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        background-color: rgba(0, 0, 0, 0.25);
+        background-blend-mode: multiply;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: cover;
+
+        color: #fff;
+        text-align: center;
+    }
+
+    #banner #header {
+        font-family: Inconsolata, monospace;
+        font-size: 7rem;
+        font-weight: bold;
+    }
+
+    #banner #sub {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
     /* Style specifies clear and top margin properties for the main element */
     main {
-        clear: left;
+        /*margin: 0;*/
         border-radius: 0;
         overflow: auto;
     }
@@ -361,10 +384,6 @@ Inherits styles from mobile layout defined above. */
 
     nav a {
         padding: 0 3rem;
-    }
-
-    #banner {
-        display: inline-block;
     }
 
     /* Style specifies border, box shadow, and margins for the main element */
