@@ -69,11 +69,11 @@ main {
 
 .button {
     display: inline-block;
-    padding: 0.5em;
-    border-radius: 1em;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 2rem;
 
     color: $colAccent;
-    font-weight: bold;
 
     background-color: $colLight;
 }
