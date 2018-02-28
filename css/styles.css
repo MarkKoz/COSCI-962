@@ -99,6 +99,22 @@ footer {
     background-color: #1d1d1c;
 }
 
+.mobile {
+    display: inherit;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+.equip {
+    display: none;
+}
+
 body > header {
     flex-flow: column nowrap;
     justify-content: center;
@@ -140,34 +156,52 @@ main {
     display: block;
     margin: 1.5rem;
     border-radius: 3rem 0 3rem 0;
+    color: #1d1d1c;
     background-color: #e6e7e8;
 }
 
-main a {
+.button {
+    display: inline-block;
     padding: 0.5em;
     border-radius: 1em;
-    color: #fff;
+    color: #e6e7e8;
     font-weight: bold;
     background-color: #58595b;
 }
 
-.mobile {
-    display: inherit;
-}
-
-.tablet {
-    display: none;
-}
-
-.desktop {
-    display: none;
-}
-
-.equip {
-    display: none;
-}
-
 @media only screen and (min-width: 660px) {
+  .button {
+        display: unset;
+        padding: unset;
+        border-radius: unset;
+        color: unset;
+        font-weight: unset;
+        background-color: unset;
+  }
+
+  .mobile {
+        display: none;
+  }
+
+  .tablet {
+        display: block;
+  }
+
+  .desktop {
+        display: inline;
+  }
+
+  .equip {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+  }
+
+  .items {
+        display: block;
+        list-style-position: inside;
+  }
+
   body > header {
         position: fixed;
         height: 6rem;
@@ -247,11 +281,6 @@ main a {
         font-weight: 500;
   }
 
-  main {
-        margin: 0;
-        border-radius: 0;
-  }
-
   /* Style specifies a font weight and top margin for description list terms */
   dt {
         font-weight: bold;
@@ -299,14 +328,6 @@ main a {
         text-decoration: underline;
     }
 
-    !* Style for contact class *!
-    .contact {
-        background-color: transparent;
-        color: #1d1d1c;
-        padding: 0;
-        text-decoration: underline;
-    }
-
     !* Style for article element *!
     article {
         background-color: #c1d9ca;
@@ -345,35 +366,15 @@ main a {
         padding: 1.5em;
         margin: 1em;
     }*/
-  .mobile {
-        display: none;
-  }
-
-  .tablet {
-        display: block;
-  }
-
-  .desktop {
-        display: inline;
-  }
-
-  .equip {
-        display: inline;
-        float: left;
-        margin-right: 1.5em;
-  }
-
-  .items {
-        display: block;
-        list-style-position: inside;
-  }
-
   main {
         margin: 0;
         padding: 0;
+        border-radius: 0;
         display: flex;
         flex-flow: column nowrap;
         align-items: stretch;
+        color: #e6e7e8;
+        background-color: #2a2a2a;
   }
 
   main > article {
@@ -381,7 +382,6 @@ main a {
         color: #e6e7e8;
         text-indent: 3rem;
         text-align: justify;
-        background-color: #2a2a2a;
   }
 
   article {
@@ -435,10 +435,6 @@ main a {
         padding: 0 3rem;
   }
 
-  main {
-        background-color: #2a2a2a;
-  }
-
     /*!* Style specifies left and right padding for paragraph elements within the main
     element *!
     main p {
@@ -485,14 +481,13 @@ main a {
     main article h2 {
         color: #000;
     }*/
-  /* Style for contact class */
-  .contact {
-        color: #fff;
-  }
-
   main > article > p {
         width: calc(200% / 3);
   }
+}
+.link {
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

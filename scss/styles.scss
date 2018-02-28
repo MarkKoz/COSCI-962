@@ -114,3 +114,8 @@ footer {
 @import "mobile.scss";
 @import "tablet.scss";
 @import "desktop.scss";
+
+.link {
+    text-decoration: underline;
+    font-weight: 500;
+}

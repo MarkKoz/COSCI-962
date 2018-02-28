@@ -12,10 +12,6 @@
         padding: 0 3rem;
     }
 
-    main {
-        background-color: $colMedium;
-    }
-
     /*!* Style specifies left and right padding for paragraph elements within the main
     element *!
     main p {
@@ -62,11 +58,6 @@
     main article h2 {
         color: #000;
     }*/
-
-    /* Style for contact class */
-    .contact {
-        color: #fff;
-    }
 
     main > article > p {
         width: calc(200% / 3);

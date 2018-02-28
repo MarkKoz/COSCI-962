@@ -2,6 +2,40 @@ $headerHeight: 6rem;
 $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
 
 @media only screen and (min-width: 660px) {
+    .button {
+        display: unset;
+        padding: unset;
+        border-radius: unset;
+
+        color: unset;
+        font-weight: unset;
+
+        background-color: unset;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: inline;
+    }
+
+    .equip {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+    }
+
+    .items {
+        display: block;
+        list-style-position: inside;
+    }
+
     body > header {
         position: fixed;
         height: $headerHeight;
@@ -92,11 +126,6 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         font-weight: 500;
     }
 
-    main {
-        margin: 0;
-        border-radius: 0;
-    }
-
     /* Style specifies a font weight and top margin for description list terms */
     dt {
         font-weight: bold;
@@ -144,14 +173,6 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         text-decoration: underline;
     }
 
-    !* Style for contact class *!
-    .contact {
-        background-color: transparent;
-        color: #1d1d1c;
-        padding: 0;
-        text-decoration: underline;
-    }
-
     !* Style for article element *!
     article {
         background-color: #c1d9ca;
@@ -191,36 +212,18 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         margin: 1em;
     }*/
 
-    .mobile {
-        display: none;
-    }
-
-    .tablet {
-        display: block;
-    }
-
-    .desktop {
-        display: inline;
-    }
-
-    .equip {
-        display: inline;
-        float: left;
-        margin-right: 1.5em;
-    }
-
-    .items {
-        display: block;
-        list-style-position: inside;
-    }
-
     main {
         margin: 0;
         padding: 0;
+        border-radius: 0;
 
         display: flex;
         flex-flow: column nowrap;
         align-items: stretch;
+
+        color: $colAccent;
+
+        background-color: $colMedium;
 
         & > article {
             align-items: center;
@@ -228,8 +231,6 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
             color: $colAccent;
             text-indent: 3rem;
             text-align: justify;
-
-            background-color: $colMedium;
         }
     }
 
