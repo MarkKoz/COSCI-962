@@ -100,6 +100,7 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
 
     #banner {
         height: $thirdHeight; // One third of the viewport height.
+        min-height: 20rem;
         overflow: hidden;
 
         display: flex;
@@ -224,20 +225,24 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         color: $colAccent;
 
         background-color: $colMedium;
+    }
 
-        & > article {
-            align-items: center;
-
-            color: $colAccent;
-            text-indent: 3rem;
-            text-align: justify;
-        }
+    .column-container {
+        flex-direction: row;
     }
 
     article {
         padding: 3rem 6rem;
         display: flex;
         flex-flow: column nowrap;
+    }
+
+    .row-top {
+        align-items: center;
+
+        color: $colAccent;
+        text-indent: 3rem;
+        text-align: justify;
     }
 
     .row {

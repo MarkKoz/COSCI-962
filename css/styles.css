@@ -258,6 +258,7 @@ main {
 
   #banner {
         height: calc((100vh - 6rem) / 3);
+        min-height: 20rem;
         overflow: hidden;
         display: flex;
         flex-flow: column nowrap;
@@ -377,17 +378,21 @@ main {
         background-color: #2a2a2a;
   }
 
-  main > article {
-        align-items: center;
-        color: #e6e7e8;
-        text-indent: 3rem;
-        text-align: justify;
+  .column-container {
+        flex-direction: row;
   }
 
   article {
         padding: 3rem 6rem;
         display: flex;
         flex-flow: column nowrap;
+  }
+
+  .row-top {
+        align-items: center;
+        color: #e6e7e8;
+        text-indent: 3rem;
+        text-align: justify;
   }
 
   .row {
