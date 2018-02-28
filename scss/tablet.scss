@@ -219,7 +219,7 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
     }
 
     .column {
-        min-width: 40rem;
+        min-width: 30rem;
         padding: 3rem 6rem;
 
         display: flex;
@@ -250,6 +250,13 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
 
         & article {
             padding: 0;
+        }
+
+        & aside {
+            padding: 1.5rem;
+            border-left: 10px solid darken($colAccent, 20%);;
+
+            background-color: darken($colAccent, 5%);
         }
     }
 

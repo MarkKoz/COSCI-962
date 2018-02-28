@@ -378,7 +378,7 @@ main {
   }
 
   .column {
-        min-width: 40rem;
+        min-width: 30rem;
         padding: 3rem 6rem;
         display: flex;
         flex-flow: column wrap;
@@ -406,6 +406,12 @@ main {
 
   .column article {
         padding: 0;
+  }
+
+  .column aside {
+        padding: 1.5rem;
+        border-left: 10px solid #b1b4b7;
+        background-color: #d9dadc;
   }
 
   .image-column-container {
