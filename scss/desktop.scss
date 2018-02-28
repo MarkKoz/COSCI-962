@@ -55,7 +55,18 @@
         color: #000;
     }*/
 
-    main > article > p {
+    .row-top p {
         width: calc(200% / 3);
+    }
+
+    .image-column-container figure {
+        margin: 0 3rem;
+
+        &:first-child {
+            margin-left: 6rem;
+        }
+        &:last-child {
+            margin-right: 6rem;
+        }
     }
 }

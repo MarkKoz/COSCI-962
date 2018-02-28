@@ -1,6 +1,11 @@
 $headerHeight: 6rem;
 $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
 
+@mixin tint-bg {
+    background-color: rgba(0, 0, 0, 0.25); // Tints the background.
+    background-blend-mode: multiply;
+}
+
 @media only screen and (min-width: 660px) {
     .button {
         display: unset;
@@ -18,11 +23,11 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
     }
 
     .tablet {
-        display: block;
+        display: inherit;
     }
 
     .desktop {
-        display: inline;
+        display: inherit;
     }
 
     .equip {
@@ -107,24 +112,25 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         flex-flow: column nowrap;
         justify-content: center;
 
-        background-color: rgba(0, 0, 0, 0.25); // Tints the background.
-        background-blend-mode: multiply;
+        @include tint-bg;
         background-position-x: center;
         background-position-y: center;
         background-size: cover;
 
         color: white;
         text-align: center;
-    }
 
-    #banner #header {
-        font-size: 7rem;
-        font-weight: bold;
-    }
+        & header {
+            font-size: 7rem;
+            font-weight: bold;
+        }
 
-    #banner #sub {
-        font-size: 2rem;
-        font-weight: 500;
+        & p {
+            margin: 0;
+
+            font-size: 2rem;
+            font-weight: 500;
+        }
     }
 
     /* Style specifies a font weight and top margin for description list terms */
@@ -278,6 +284,43 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         & article {
             width: calc(200% / 3);
             align-items: flex-start;
+        }
+    }
+
+    .image-column-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+
+        background-color: $colAccent;
+
+        & figure {
+            height: calc(#{$thirdHeight} * 1);
+            min-height: 20rem;
+            margin: 0 1.5rem;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            flex: 1;
+
+            @include tint-bg;
+            background-position: center;
+            background-size: cover;
+
+            & header {
+                font-size: 4rem;
+                font-weight: bold;
+                text-align: center;
+                color: white;
+            }
+
+            &:first-child {
+                margin-left: 3rem;
+            }
+            &:last-child {
+                margin-right: 3rem;
+            }
         }
     }
 }

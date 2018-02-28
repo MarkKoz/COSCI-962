@@ -188,11 +188,11 @@ main {
   }
 
   .tablet {
-        display: block;
+        display: inherit;
   }
 
   .desktop {
-        display: inline;
+        display: inherit;
   }
 
   .equip {
@@ -276,12 +276,13 @@ main {
         text-align: center;
   }
 
-  #banner #header {
+  #banner header {
         font-size: 7rem;
         font-weight: bold;
   }
 
-  #banner #sub {
+  #banner p {
+        margin: 0;
         font-size: 2rem;
         font-weight: 500;
   }
@@ -430,6 +431,42 @@ main {
         width: calc(200% / 3);
         align-items: flex-start;
   }
+
+  .image-column-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;
+        background-color: #e6e7e8;
+  }
+
+  .image-column-container figure {
+        height: calc(calc((100vh - 6rem) / 3) * 1);
+        min-height: 20rem;
+        margin: 0 1.5rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        flex: 1;
+        background-color: rgba(0, 0, 0, 0.25);
+        background-blend-mode: multiply;
+        background-position: center;
+        background-size: cover;
+  }
+
+  .image-column-container figure header {
+        font-size: 4rem;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+  }
+
+  .image-column-container figure:first-child {
+        margin-left: 3rem;
+  }
+
+  .image-column-container figure:last-child {
+        margin-right: 3rem;
+  }
 }
 @media only screen and (min-width: 830px) {
   /* Style applies color to h1 element */
@@ -487,8 +524,20 @@ main {
     main article h2 {
         color: #000;
     }*/
-  main > article > p {
+  .row-top p {
         width: calc(200% / 3);
+  }
+
+  .image-column-container figure {
+        margin: 0 3rem;
+  }
+
+  .image-column-container figure:first-child {
+        margin-left: 6rem;
+  }
+
+  .image-column-container figure:last-child {
+        margin-right: 6rem;
   }
 }
 .link {
