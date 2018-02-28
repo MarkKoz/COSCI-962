@@ -302,4 +302,8 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
             }
         }
     }
+
+    .center-text-tablet {
+        text-align: center !important;
+    }
 }

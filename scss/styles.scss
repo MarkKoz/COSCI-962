@@ -124,6 +124,11 @@ footer {
     background-color: $colDark;
 }
 
+.no-indent-justify {
+    text-indent: 0 !important;
+    text-align: left !important;
+}
+
 @import "mobile.scss";
 @import "tablet.scss";
 @import "desktop.scss";
