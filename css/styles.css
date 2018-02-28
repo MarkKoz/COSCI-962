@@ -72,7 +72,8 @@ aside {
     font-style: italic;
 }
 
-article header {
+article header,
+.column header {
     display: inline-block;
     margin: 1rem 0;
     padding: 1rem;
@@ -84,7 +85,13 @@ article header h2,
 article header h3,
 article header h4,
 article header h5,
-article header h6 {
+article header h6,
+.column header h1,
+.column header h2,
+.column header h3,
+.column header h4,
+.column header h5,
+.column header h6 {
     margin: 0;
     text-transform: uppercase;
     text-align: center;
@@ -204,11 +211,11 @@ main {
         justify-content: flex-start;
   }
 
-  #logo {
+  body > header #logo {
         flex-shrink: 0;
   }
 
-  #logo > img {
+  body > header #logo > img {
         height: 6rem;
   }
 
@@ -241,7 +248,7 @@ main {
         box-shadow: 0 -0.8rem 0 #e6e7e8 inset;
   }
 
-  #nav-current {
+  nav #nav-current {
         background: #e6e7e8;
         color: #1d1d1c;
   }
@@ -288,85 +295,15 @@ main {
         font-weight: bold;
   }
 
-  /* Style rule for h1 element*/
-  h1 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
         text-align: center;
   }
 
-    /*!* Style for images within the figure element *!
-    figure img {
-        background-color: #1d1d1c;
-        display: inline;
-        height: 8em;
-        width: 28%;
-        margin: 1%;
-        padding: 1%;
-    }
-
-    !* Style for anchor elements within the figure element *!
-    figure a {
-        background-color: transparent;
-        padding: 0;
-        text-decoration: none;
-    }
-
-    !* Style specifies bottom padding for the section element *!
-    section {
-        padding-bottom: 3em;
-    }
-
-    !* Style for h1 element within the section element *!
-    section h1 {
-        text-align: left;
-    }
-
-    !* Style for anchor element within the section element *!
-    section a {
-        background-color: transparent;
-        color: #1d1d1c;
-        font-weight: normal;
-        padding: 0;
-        text-decoration: underline;
-    }
-
-    !* Style for article element *!
-    article {
-        background-color: #c1d9ca;
-        float: left;
-        margin: 0.5%;
-        padding: 0.5%;
-        text-align: center;
-        width: 31%;
-    }
-
-    !* Style for image element contained within the main article element *!
-    main article img {
-        border: solid 0.1em #1d1d1c;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    !* Style for paragraph element contained within the main article element *!
-    main article p {
-        color: #000;
-        margin-top: 2%;
-        padding: 1%;
-        text-align: left;
-    }
-
-    !* Style for unordered list element contained within the main article element *!
-    main article ul {
-        text-align: left;
-    }
-
-    !* Style for aside element *!
-    aside {
-        background-color: #fff;
-        border-radius: 0 5em 5em 5em;
-        box-shadow: 1em 1em 1em #4c4f4d;
-        padding: 1.5em;
-        margin: 1em;
-    }*/
   main {
         margin: 0;
         padding: 0;
@@ -376,10 +313,6 @@ main {
         align-items: stretch;
         color: #e6e7e8;
         background-color: #2a2a2a;
-  }
-
-  .column-container {
-        flex-direction: row;
   }
 
   article {
@@ -444,6 +377,37 @@ main {
         align-items: flex-start;
   }
 
+  .column {
+        min-width: 40rem;
+        padding: 3rem 6rem;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        flex: 1;
+        color: #1d1d1c;
+        background-color: #e6e7e8;
+  }
+
+  .column:nth-child(even) {
+        background-color: #f3f4f4;
+  }
+
+  .column:nth-child(even) header {
+        color: #f3f4f4;
+  }
+
+  .column figure {
+        width: 100%;
+        height: 30rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+  }
+
+  .column article {
+        padding: 0;
+  }
+
   .image-column-container {
         display: flex;
         flex-flow: row wrap;
@@ -460,12 +424,6 @@ main {
         background-blend-mode: multiply;
         background-position: center;
         background-size: cover;
-    /*&:first-child {
-        margin-left: 3rem;
-    }
-    &:last-child {
-        margin-right: 3rem;
-    }*/
   }
 
   .image-column-container figure:hover {
@@ -491,76 +449,14 @@ main {
   }
 }
 @media only screen and (min-width: 830px) {
-  /* Style applies color to h1 element */
-  h1 {
-        color: #fff;
-  }
-
   nav a {
         padding: 0 3rem;
   }
 
-    /*!* Style specifies left and right padding for paragraph elements within the main
-    element *!
-    main p {
-        color: #fff;
-        margin-left: auto;
-        margin-right: auto;
-        width: 90%;
-    }
-
-    !* Style applies height and opacity to images within figure element *!
-    figure img {
-        height: 15em;
-        opacity: 0.7;
-    }
-
-    !* Style removes transparency on hover *!
-    figure img:hover {
-        opacity: 1;
-    }
-
-    !* Style specifies color and left margin for the section element *!
-    section {
-        color: #fff;
-        margin-left: 1em;
-        padding-bottom: 5em;
-    }
-
-    !* Style for anchor element within the section element *!
-    section a {
-        color: #fff;
-    }
-
-    !* Style for paragraph within the section element *!
-    section p {
-        margin-left: 0;
-    }
-
-    !* Style for main h2 element *!
-    main h2 {
-        color: #fff;
-    }
-
-    !* Style for main article h2 element *!
-    main article h2 {
-        color: #000;
-    }*/
   .row-top > p,
   .row-top > dl {
         width: calc(200% / 3);
   }
-
-    /*.image-column-container figure {
-        margin: 0 3rem;
-
-        &:first-child {
-            margin-left: 6rem;
-        }
-        &:last-child {
-            margin-right: 6rem;
-        }
-    }*/
 }
 .link {
     text-decoration: underline;
