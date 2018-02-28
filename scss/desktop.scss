@@ -55,7 +55,8 @@
         color: #000;
     }*/
 
-    .row-top p {
+    .row-top > p,
+    .row-top > dl {
         width: calc(200% / 3);
     }
 

@@ -133,10 +133,15 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         }
     }
 
-    /* Style specifies a font weight and top margin for description list terms */
+    dl {
+        margin: 0;
+    }
+
     dt {
+        margin-top: 1rem;
+
+        font-size: 2.2rem;
         font-weight: bold;
-        margin-top: 0.7em;
     }
 
     /* Style rule for h1 element*/
@@ -245,8 +250,11 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
 
     .row-top {
         align-items: center;
-
         color: $colAccent;
+    }
+
+    .indent-justify p,
+    .indent-justify dl {
         text-indent: 3rem;
         text-align: justify;
     }
