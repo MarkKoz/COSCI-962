@@ -1,0 +1,77 @@
+body > header {
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+nav {
+    margin-bottom: 1.5rem;
+
+    flex-flow: column nowrap;
+    align-items: stretch;
+
+    box-shadow: $colMedium;
+}
+
+nav > a {
+    margin: 0.5rem 1.5rem;
+    padding: 1rem;
+    border-radius: 3rem;
+
+    color: $colDark;
+
+    background-color: $colAccent;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:link,
+    &:visited {
+        color: $colDark;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $colLight;
+        color: $colAccent;
+    }
+}
+
+main {
+    display: block;
+    margin: 1.5rem;
+    border-radius: 3rem 0 3rem 0;
+    background-color: $colAccent;
+
+    // Styles anchors as buttons.
+    // TODO
+    & a {
+        padding: 0.5em;
+        border-radius: 1em;
+
+        color: #fff;
+        font-weight: bold;
+
+        background-color: $colLight;
+    }
+}
+
+.mobile {
+    display: inherit;
+}
+
+.tablet {
+    display: none;
+}
+
+.desktop {
+    display: none;
+}
+
+.equip {
+    display: none;
+}

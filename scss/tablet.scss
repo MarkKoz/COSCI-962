@@ -1,0 +1,273 @@
+$headerHeight: 6rem;
+$thirdHeight: calc((100vh - #{$headerHeight}) / 3);
+
+@media only screen and (min-width: 660px) {
+    body > header {
+        position: fixed;
+        height: $headerHeight;
+
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+
+    #logo {
+        flex-shrink: 0;
+
+        & > img {
+            height: 6rem;
+        }
+    }
+
+    nav {
+        height: 100%;
+        margin: 0;
+
+        flex-flow: row nowrap;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    nav a {
+        height: 100%;
+        margin: 0;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+        border-radius: 0;
+
+        display: flex;
+        align-items: center;
+
+        color: $colAccent;
+
+        background-color: transparent;
+
+        &:link,
+        &:visited {
+            color: $colAccent;
+        }
+
+        &:hover,
+        &:active {
+            background-color: transparent;
+            box-shadow: 0 -0.8rem 0 $colAccent inset;
+        }
+    }
+
+    #nav-current {
+        background: $colAccent;
+        color: $colDark;
+    }
+
+    #container {
+        padding-top: 6rem;
+
+        background-color: $colDark;
+    }
+
+    #banner {
+        height: $thirdHeight; // One third of the viewport height.
+        overflow: hidden;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        background-color: rgba(0, 0, 0, 0.25); // Tints the background.
+        background-blend-mode: multiply;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: cover;
+
+        color: white;
+        text-align: center;
+    }
+
+    #banner #header {
+        font-size: 7rem;
+        font-weight: bold;
+    }
+
+    #banner #sub {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    main {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    /* Style specifies a font weight and top margin for description list terms */
+    dt {
+        font-weight: bold;
+        margin-top: 0.7em;
+    }
+
+    /* Style rule for h1 element*/
+    h1 {
+        text-align: center;
+    }
+
+    /*!* Style for images within the figure element *!
+    figure img {
+        background-color: #1d1d1c;
+        display: inline;
+        height: 8em;
+        width: 28%;
+        margin: 1%;
+        padding: 1%;
+    }
+
+    !* Style for anchor elements within the figure element *!
+    figure a {
+        background-color: transparent;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    !* Style specifies bottom padding for the section element *!
+    section {
+        padding-bottom: 3em;
+    }
+
+    !* Style for h1 element within the section element *!
+    section h1 {
+        text-align: left;
+    }
+
+    !* Style for anchor element within the section element *!
+    section a {
+        background-color: transparent;
+        color: #1d1d1c;
+        font-weight: normal;
+        padding: 0;
+        text-decoration: underline;
+    }
+
+    !* Style for contact class *!
+    .contact {
+        background-color: transparent;
+        color: #1d1d1c;
+        padding: 0;
+        text-decoration: underline;
+    }
+
+    !* Style for article element *!
+    article {
+        background-color: #c1d9ca;
+        float: left;
+        margin: 0.5%;
+        padding: 0.5%;
+        text-align: center;
+        width: 31%;
+    }
+
+    !* Style for image element contained within the main article element *!
+    main article img {
+        border: solid 0.1em #1d1d1c;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    !* Style for paragraph element contained within the main article element *!
+    main article p {
+        color: #000;
+        margin-top: 2%;
+        padding: 1%;
+        text-align: left;
+    }
+
+    !* Style for unordered list element contained within the main article element *!
+    main article ul {
+        text-align: left;
+    }
+
+    !* Style for aside element *!
+    aside {
+        background-color: #fff;
+        border-radius: 0 5em 5em 5em;
+        box-shadow: 1em 1em 1em #4c4f4d;
+        padding: 1.5em;
+        margin: 1em;
+    }*/
+
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: inline;
+    }
+
+    .equip {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+    }
+
+    .items {
+        display: block;
+        list-style-position: inside;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+
+        & > article {
+            padding: 1.5rem 3rem;
+
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+
+            color: $colAccent;
+            text-indent: 3rem;
+            text-align: justify;
+
+            background-color: $colMedium;
+        }
+    }
+
+    .row {
+        width: 100%;
+        min-height: $thirdHeight;
+
+        display: inline-flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+
+        color: $colDark;
+
+        background-color: $colAccent;
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        & .row-image {
+            width: calc(100% / 3);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        & article {
+            width: calc(200% / 3);
+            padding: 3rem 6rem;
+
+            display: inline-flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+    }
+}
