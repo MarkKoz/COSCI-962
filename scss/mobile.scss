@@ -63,6 +63,33 @@ main {
     background-color: $colAccent;
 }
 
+.row-top,
+.row,
+.column {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+
+    border-bottom: 10px solid darken($colAccent, 20%);
+
+    & > :last-child,
+    & p:last-child {
+        margin-bottom: 0;
+    }
+
+    & header {
+        margin-top: 0;
+    }
+
+    &:first-child {
+        margin-top: 1.5rem;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+        border: none;
+    }
+}
+
 .button {
     display: inline-block;
     margin: 0.5rem;

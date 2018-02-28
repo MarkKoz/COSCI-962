@@ -85,7 +85,12 @@ main {
 }
 
 aside {
+    padding: 1.5rem;
+    border-left: 10px solid darken($colAccent, 20%);;
+
     font-style: italic;
+
+    background-color: darken($colAccent, 5%);
 }
 
 article header,
