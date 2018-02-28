@@ -71,10 +71,6 @@ article header {
     display: inline-block;
     margin: 1rem 0;
     padding: 1rem;
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-    color: #e6e7e8;
     background-color: #2a2a2a;
 }
 
@@ -85,6 +81,10 @@ article header h4,
 article header h5,
 article header h6 {
     margin: 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #e6e7e8;
 }
 
 footer {
@@ -414,8 +414,9 @@ main {
         color: #f3f4f4;
   }
 
-  .row .row-image {
+  .row figure {
         width: calc(100% / 3);
+        margin: 0;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;

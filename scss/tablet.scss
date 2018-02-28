@@ -266,8 +266,9 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
             }
         }
 
-        & .row-image {
+        & figure {
             width: calc(100% / 3);
+            margin: 0;
 
             background-repeat: no-repeat;
             background-size: cover;
