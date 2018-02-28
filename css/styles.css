@@ -31,8 +31,7 @@ h3,
 h4,
 h5,
 h6,
-nav > a,
-#banner #header {
+header {
     font-family: Inconsolata, monospace;
 }
 
@@ -442,30 +441,30 @@ main {
   .image-column-container figure {
         height: calc(calc((100vh - 6rem) / 3) * 1);
         min-height: 20rem;
-        margin: 0 1.5rem;
+        margin: 0;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
+        align-items: center;
         flex: 1;
         background-color: rgba(0, 0, 0, 0.25);
         background-blend-mode: multiply;
         background-position: center;
         background-size: cover;
+    /*&:first-child {
+        margin-left: 3rem;
+    }
+    &:last-child {
+        margin-right: 3rem;
+    }*/
   }
 
   .image-column-container figure header {
-        font-size: 4rem;
+        margin: 3rem;
+        font-size: 5rem;
         font-weight: bold;
         text-align: center;
         color: white;
-  }
-
-  .image-column-container figure:first-child {
-        margin-left: 3rem;
-  }
-
-  .image-column-container figure:last-child {
-        margin-right: 3rem;
   }
 }
 @media only screen and (min-width: 830px) {
@@ -528,17 +527,16 @@ main {
         width: calc(200% / 3);
   }
 
-  .image-column-container figure {
+    /*.image-column-container figure {
         margin: 0 3rem;
-  }
 
-  .image-column-container figure:first-child {
-        margin-left: 6rem;
-  }
-
-  .image-column-container figure:last-child {
-        margin-right: 6rem;
-  }
+        &:first-child {
+            margin-left: 6rem;
+        }
+        &:last-child {
+            margin-right: 6rem;
+        }
+    }*/
 }
 .link {
     text-decoration: underline;
