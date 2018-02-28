@@ -30,14 +30,9 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
         display: inherit;
     }
 
-    .equip {
-        display: inline;
-        float: left;
-        margin-right: 1.5em;
-    }
-
-    .items {
+    .list {
         display: block;
+        margin: 0;
         list-style-position: inside;
     }
 
@@ -251,6 +246,14 @@ $thirdHeight: calc((100vh - #{$headerHeight}) / 3);
     .row-top {
         align-items: center;
         color: $colAccent;
+
+        & .header-accented {
+            background-color: $colAccent;
+
+            & %headings {
+                color: $colDark;
+            }
+        }
     }
 
     .indent-justify p,

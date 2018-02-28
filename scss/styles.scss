@@ -89,20 +89,20 @@ aside {
 }
 
 article header {
-    display: inline-block;
-    margin: 1rem 0;
-    padding: 1rem;
+     display: inline-block;
+     margin: 1rem 0;
+     padding: 1rem;
 
-    background-color: $colMedium;
+     background-color: $colMedium;
 
-    & %headings {
-        margin: 0;
+     & %headings {
+         margin: 0;
 
-        text-transform: uppercase;
-        text-align: center;
-        color: $colAccent;
-    }
-}
+         text-transform: uppercase;
+         text-align: center;
+         color: $colAccent;
+     }
+ }
 
 footer {
     padding: 1.5rem;

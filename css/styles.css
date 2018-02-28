@@ -115,10 +115,6 @@ footer {
     display: none;
 }
 
-.equip {
-    display: none;
-}
-
 body > header {
     flex-flow: column nowrap;
     justify-content: center;
@@ -195,14 +191,9 @@ main {
         display: inherit;
   }
 
-  .equip {
-        display: inline;
-        float: left;
-        margin-right: 1.5em;
-  }
-
-  .items {
+  .list {
         display: block;
+        margin: 0;
         list-style-position: inside;
   }
 
@@ -400,6 +391,19 @@ main {
   .row-top {
         align-items: center;
         color: #e6e7e8;
+  }
+
+  .row-top .header-accented {
+        background-color: #e6e7e8;
+  }
+
+  .row-top .header-accented h1,
+  .row-top .header-accented h2,
+  .row-top .header-accented h3,
+  .row-top .header-accented h4,
+  .row-top .header-accented h5,
+  .row-top .header-accented h6 {
+        color: #1d1d1c;
   }
 
   .indent-justify p,
