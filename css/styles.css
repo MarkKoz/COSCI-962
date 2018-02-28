@@ -377,9 +377,6 @@ main a {
   }
 
   main > article {
-        padding: 1.5rem 3rem;
-        display: flex;
-        flex-flow: column nowrap;
         align-items: center;
         color: #e6e7e8;
         text-indent: 3rem;
@@ -387,10 +384,16 @@ main a {
         background-color: #2a2a2a;
   }
 
+  article {
+        padding: 3rem 6rem;
+        display: flex;
+        flex-flow: column nowrap;
+  }
+
   .row {
         width: 100%;
         min-height: calc((100vh - 6rem) / 3);
-        display: inline-flex;
+        display: flex;
         flex-flow: row nowrap;
         align-items: stretch;
         color: #1d1d1c;
@@ -399,6 +402,11 @@ main a {
 
   .row:nth-child(odd) {
         flex-direction: row-reverse;
+        background-color: #f3f4f4;
+  }
+
+  .row:nth-child(odd) article header {
+        color: #f3f4f4;
   }
 
   .row .row-image {
@@ -410,9 +418,6 @@ main a {
 
   .row article {
         width: calc(200% / 3);
-        padding: 3rem 6rem;
-        display: inline-flex;
-        flex-flow: column nowrap;
         align-items: flex-start;
   }
 }
