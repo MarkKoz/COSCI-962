@@ -3,7 +3,7 @@ var mySecondValue = 7 + 9;
 var myThirdValue = myValue + mySecondValue;
 alert(myThirdValue);
 
-var myName = "Jesse";
-var myLastName = "Liberty";
+var myName = "Mark";
+var myLastName = "Kozlov";
 var myFullName = myName + " " + myLastName;
 alert(myFullName);
