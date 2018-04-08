@@ -14,8 +14,8 @@ function walls(diameter, height) {
 }
 
 function materialsNeeded() {
-    var d = 8;
-    var h = 10;
+    var d = document.getElementById("across").value;
+    var h = document.getElementById("height").value;
 
     var carpetNeeded = floor(d);
     var paintNeeded = walls(d, h);
