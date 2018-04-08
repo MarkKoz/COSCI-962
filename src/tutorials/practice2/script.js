@@ -2,7 +2,7 @@ function floor(diameter) {
     var radius = diameter / 2;
     var floorArea = Math.PI * (radius * radius);
 
-    console.log(floorArea);
+    return floorArea;
 }
 
 function walls(diameter, height) {
@@ -10,8 +10,16 @@ function walls(diameter, height) {
     var circumference = 2 * Math.PI * radius;
     var wallArea = circumference * height;
 
-    console.log(wallArea);
+    return wallArea;
 }
 
-floor(8);
-walls(8, 10);
+function materialsNeeded() {
+    var d = 8;
+    var h = 10;
+
+    var carpetNeeded = floor(d);
+    var paintNeeded = walls(d, h);
+
+    console.log(carpetNeeded);
+    console.log(paintNeeded);
+}
