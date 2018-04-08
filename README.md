@@ -34,7 +34,7 @@ times the pay per hour.
 
 ##### ATM (Extra Credit)
 * Set an initial balance of $1000.
-* Create a functon for all operations:
+* Create a function for all operations:
     * `balanceCheck()`
     * `withdraw(amount)`
     * `deposit(amount)`
