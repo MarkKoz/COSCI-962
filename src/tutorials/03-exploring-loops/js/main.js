@@ -1,0 +1,7 @@
+var elementID = document.getElementById("state");
+console.log(elementID);
+
+for (i = 0; i < elementID.length; ++i) {
+    console.log(elementID[i].text);
+    console.log(elementID[i].value);
+}
