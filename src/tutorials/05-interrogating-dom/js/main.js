@@ -21,3 +21,11 @@ foundYou = document.querySelectorAll("ul#lp_list li");
 console.log(foundYou[0].innerText);
 console.log("LENGTH OF COLLECTION >> " + foundYou.length);
 foundYou[2].innerText = "<<I Changed You>>";
+
+foundYou = document.getElementById("sw_list");
+console.log(foundYou);
+var childArray = foundYou.getElementsByTagName("li");
+console.log(childArray);
+childArray[0].innerText = ">>These Items";
+childArray[1].innerText = ">>Have Just";
+childArray[2].innerText = ">>Been Changed";
