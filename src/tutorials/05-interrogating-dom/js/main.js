@@ -44,6 +44,16 @@ childArray[2].innerText = ">>Been Changed";
 // 07 - Combination 2
 console.log("\n07 - Combination 2");
 
+var newOptions = ["Orange", "Red", "Blue"]
+
+foundYou = document.getElementById("myForm");
+console.log(foundYou);
+
+var selectArray = foundYou.getElementsByTagName("option");
+console.log(selectArray);
+
+for (i = 0; i < selectArray.length; ++i)
+    selectArray[i].innerText = newOptions[i];
 
 // 08 - Combination 3
 console.log("\n08 - Combination 3");
