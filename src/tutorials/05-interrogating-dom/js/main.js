@@ -16,3 +16,8 @@ foundYou[0].innerHTML = ">>I Changed You<<";
 foundYou = document.getElementsByClassName("smallCenter");
 console.log(foundYou[0].innerText);
 foundYou[0].innerText = "<<New Paragraph Info<<";
+
+foundYou = document.querySelectorAll("ul#lp_list li");
+console.log(foundYou[0].innerText);
+console.log("LENGTH OF COLLECTION >> " + foundYou.length);
+foundYou[2].innerText = "<<I Changed You>>";
