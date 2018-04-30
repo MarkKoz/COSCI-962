@@ -38,4 +38,13 @@ function calculateSolar() {
 
     var sunHoursPerDay = sunHours();
     console.log(sunHoursPerDay);
+
+    var minKwNeeds = dailyUseKw / sunHoursPerDay;
+    console.log(minKwNeeds);
+
+    var realKwNeeds = minKwNeeds * 1.25;
+    console.log(realKwNeeds);
+
+    var realWattNeeds = realKwNeeds * 1000;
+    console.log(realWattNeeds);
 }
