@@ -1,0 +1,15 @@
+.BlueDiv {
+    background-color: navy;
+    color: white;
+    width: 200px;
+}
+
+.RedDiv {
+    background-color: red;
+    color: white;
+    width: 200px;
+}
+
+.style1 {
+    width: 100%;
+}
