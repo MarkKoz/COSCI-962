@@ -36,9 +36,23 @@ $(document).ready(() => {
     // alert(typeof inputs[0]);
     alert($(inputs[0]).val());*/
 
-    // $(":input").each(function() {
+    /*// $(":input").each(function() {
     $("#form1 :input").each(function() {
        let elem = $(this);
        alert(elem.val());
-    });
+    });*/
+
+    // alert($("div:contains('my div')").html());
+
+    // $("tr").css("background-color", "green");
+    // $("tr:odd").css("background-color", "yellow");
+    // $("tr:even").css("background-color", "yellow");
+    // $("tr:first-child").css("background-color", "yellow");
+    // $("#DataTable tr:odd").css("background-color", "green");
+
+    // alert($("div[title$='Title']").html());
+    // alert($("div[title^='Title']").html());
+    // alert($("div[title*='Title']").html());
+
+    $("div[title*='Title']").html("Updated div value due to title.");
 });
