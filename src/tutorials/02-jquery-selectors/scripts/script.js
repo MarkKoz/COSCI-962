@@ -28,7 +28,17 @@ $(document).ready(() => {
     /*let divs = $("div[title='Div Title']");
     alert(divs.length);*/
 
-    let inputs = $("input[type='text']");
+    /*let inputs = $("input[type='text']");
     // alert(inputs.length);
-    inputs.css("background-color", "yellow");
+    inputs.css("background-color", "yellow");*/
+
+    /*let inputs = $(":input");
+    // alert(typeof inputs[0]);
+    alert($(inputs[0]).val());*/
+
+    // $(":input").each(function() {
+    $("#form1 :input").each(function() {
+       let elem = $(this);
+       alert(elem.val());
+    });
 });
