@@ -51,8 +51,16 @@ $(document).ready(() => {
 
     // Wrap
     $("span.Foo").wrap("<div class='RedDiv ParentWrapper'/>");
-    $("div.ParentWrapper").each((_, e) => alert($(e).html()));
+    // $("div.ParentWrapper").each((_, e) => alert($(e).html()));
 
     // Remove
     $("div.ParentWrapper").remove();
+
+    // Class Functions
+    // $("input[type='text']").addClass("Highlight");
+    // $("#LastNameTextBox").removeClass("Highlight");
 });
+
+function FocusBlur(tb) {
+    $(tb).toggleClass("Highlight");
+}

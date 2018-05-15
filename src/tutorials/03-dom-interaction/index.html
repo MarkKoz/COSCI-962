@@ -52,12 +52,12 @@
         <tr>
             <td style="width: 30%;">First Name</td>
             <td style="width: 70%;">
-                <input id="FirstNameTextBox" value="John" type="text"/>
+                <input id="FirstNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text"/>
             </td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td><input id="LastNameTextBox" type="text"/></td>
+            <td><input id="LastNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" type="text"/></td>
         </tr>
         <tr>
             <td>Comments</td>
