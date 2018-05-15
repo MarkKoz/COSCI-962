@@ -29,4 +29,19 @@ $(document).ready(() => {
         .css("background-color", "yellow")
         .css("font-size", "14pt")
         .css("color", "black");
+
+    // Modifying the DOM
+    const tcd = $("#TableContainerDiv");
+
+    tcd.append("<span style='background-color: green;'>Appended Child 1</span>");
+    tcd.prepend("<br><span style='background-color: green;'>Prepended Child 1</span>");
+    $("<br><span style='background-color: green;'>Appended Child 2</span>").appendTo(tcd);
+    $("<span style='background-color: green;'>Prepended Child 2</span>").prependTo(tcd);
+
+    // Wrap
+    $("span.Foo").wrap("<div class='RedDiv ParentWrapper'/>");
+    $("div.ParentWrapper").each((_, e) => alert($(e).html()));
+
+    // Remove
+    $("div.ParentWrapper").remove();
 });
