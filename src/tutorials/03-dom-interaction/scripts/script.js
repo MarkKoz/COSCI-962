@@ -22,13 +22,24 @@ $(document).ready(() => {
         style: "font-size: 14pt; background-color: yellow; color: black;"
     });*/
 
-    divs
+    /*divs
         .attr({
             title: "Some title 3"
         })
         .css("background-color", "yellow")
         .css("font-size", "14pt")
-        .css("color", "black");
+        .css("color", "black");*/
+
+    divs
+        .attr({
+            title: "Some title 3"
+        })
+        .css({
+            "background-color": "purple",
+            "font-size": "20pt",
+            "color": "white"
+        })
+        .text("Changed Colour");
 
     // Modifying the DOM
     const tcd = $("#TableContainerDiv");
