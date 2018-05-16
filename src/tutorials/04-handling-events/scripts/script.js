@@ -15,4 +15,21 @@ function WireEvents() {
         alert($(this).val());
         $(this).addClass("Highlight");
     });
+
+    $("#MyDiv")
+        .mouseenter(function() {
+            Toggle(this);
+            $(this).css("cursor", "pointer");
+        })
+        .mouseleave(function() {
+            Toggle(this);
+        })
+        .mouseup(function(e) {
+            alert($(e.target).attr("id"));
+            $(this).text("X: " + e.pageX + " Y: " + e.pageY);
+        });
+
+    function Toggle(div) {
+        $(div).toggleClass("Highlight");
+    }
 }
