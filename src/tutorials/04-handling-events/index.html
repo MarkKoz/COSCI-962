@@ -41,5 +41,14 @@
         </tr>
     </table>
 </form>
+<script type="text/javascript">
+    // Handle events the old-fashioned way.
+   const button = document.getElementById('SubmitButton');
+
+   if (document.addEventListener)
+       button.addEventListener('click', () => alert('Clicked Button'), false);
+   else
+       button.attachEvent('onclick', () => alert('Clicked IE Button'));
+</script>
 </body>
 </html>
