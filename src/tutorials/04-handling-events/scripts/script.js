@@ -40,4 +40,21 @@ function WireEvents() {
         if (e.type === "mouseup")
             $(this).text("X: " + e.pageX + " Y: " + e.pageY);
     });
+
+    // Using hover()
+    /*$("#MyTable tr").hover(
+        function() {
+            // mousenter
+            $(this).css("background-color", "#efefef");
+        },
+        function() {
+            // mouseleave
+            $(this).css("background-color", "white");
+        });*/
+
+    $("#MyTable tr").hover(function() {
+        $(this).toggleClass("LightHighlight");
+    });
+
+    // Using toggle() - doesn't work in later versions?
 }
