@@ -1,0 +1,58 @@
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+input[type=text] {
+    background-color: #efefef;
+}
+
+.BlueDiv {
+    background-color: Navy;
+    color: White;
+    width: 200px;
+}
+
+.RedDiv {
+    background-color: Red;
+    color: White;
+    width: 200px;
+}
+
+.Highlight {
+    background-color: Yellow;
+}
+
+.LightHighlight {
+    background-color: #ccc;
+}
+
+.PhoneHighlight {
+    background-color: #ccc;
+}
+
+.PhoneNumber {
+    margin-top: 5px;
+    width: 80px;
+}
+
+.PhoneType {
+    margin-top: 5px;
+}
+
+.PhoneNumberDiv {
+    text-align: left;
+    vertical-align: middle;
+    width: 200px;
+    float: left;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.PhoneTypeDiv {
+    text-align: left;
+    vertical-align: middle;
+    width: 100px;
+    float: left;
+    height: 30px;
+}
