@@ -13,22 +13,22 @@
         <tr>
             <td style="width: 30%;">First Name</td>
             <td style="width: 70%;">
-                <input id="FirstNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" value="John" type="text"/>
+                <input id="FirstNameTextBox" value="John" type="text"/>
             </td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td><input id="LastNameTextBox" onfocus="FocusBlur(this)" onblur="FocusBlur(this)" type="text"/></td>
+            <td><input id="LastNameTextBox" class="MyInput" type="text"/></td>
         </tr>
         <tr>
             <td>Comments</td>
             <td>
-                <textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea>
+                <textarea class="MyInput" rows="5" cols="60" id="CommentsTextBox">TextArea</textarea>
             </td>
         </tr>
         <tr>
             <td>
-                <select id="sel">
+                <select id="sel" class="MyInput">
                     <option value="AZ">AZ</option>
                     <option value="CA" selected>CA</option>
                 </select>

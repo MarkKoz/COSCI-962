@@ -9,4 +9,10 @@ function WireEvents() {
 
         $("#DivOutput").text(firstNameVal + " " + lastNameVal);
     });
+
+    // Handle selection.
+    $(".MyInput").change(function() {
+        alert($(this).val());
+        $(this).addClass("Highlight");
+    });
 }
