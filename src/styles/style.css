@@ -158,7 +158,7 @@ main form select {
     color: green;
 }
 
-main button {
+main input[type="submit"] {
     width: 240px;
     border: none;
     padding: .8rem;

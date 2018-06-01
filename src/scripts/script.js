@@ -1,5 +1,4 @@
 $(document).ready(() => {
-    $("form").submit(false);
     const balance = $(".balance");
 
     // Hides feedback message when the input changes.
@@ -7,16 +6,18 @@ $(document).ready(() => {
         $(this).closest("fieldset").find(".feedback").hide();
     });
 
-    $("#deposit button").click(() => {
-        const target = $("#deposit");
+    $("#deposit").submit(function() {
+        const target = $(this);
         const input = parseFloat(target.find("input").val());
 
         balance.html((parseFloat(balance.html()) + input).toFixed(2));
         setFeedback(target.find(".feedback"), `Successfully deposited $${input}.`);
+
+        return false; // Prevents page refresh.
     });
 
-    $("#withdraw button").click(() => {
-        const target = $("#withdraw");
+    $("#withdraw").submit(function() {
+        const target = $(this);
         const balFloat = parseFloat(balance.html());
         const input = parseFloat(target.find("input").val());
 
@@ -26,6 +27,8 @@ $(document).ready(() => {
             balance.html((balFloat - input).toFixed(2));
             setFeedback(target.find(".feedback"), `Successfully withdrew $${input}.`);
         }
+
+        return false; // Prevents page refresh.
     });
 });
 
