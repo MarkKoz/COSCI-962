@@ -130,13 +130,14 @@ main fieldset legend {
 main form label {
     display: block;
     padding: .4rem 0;
-    font-size: .75rem;
+    font-size: .95rem;
 
 }
 
-main form span {
+main form label span {
     display: block;
-    font-size: .7rem;
+    margin-bottom: .25rem;
+    font-size: .75rem;
     color: #004b8e;
 }
 
@@ -147,6 +148,14 @@ main form input {
 
 main form select {
     width: 15rem;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
 }
 
 main button {
